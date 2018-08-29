@@ -10,13 +10,23 @@
     <script>
         let fornavn = prompt("Hvad er dit fornavn?");
         let efternavn = prompt("Hvad er dit efternavn?");
-        if (fornavn != null && efternavn != null) {
-            alert("Goddag " + fornavn + " " + efternavn);
-        } else if (fornavn != "" && efternavn != "") {
-            alert("Goddag " + fornavn + " " + efternavn);
-        } else {
-            alert("Goddag min ven");
+        let besked;
+
+        besked = "Goddag";
+
+        if (fornavn != null && fornavn != "") {
+            besked += " " + fornavn;
         }
+
+        if (efternavn != null && efternavn != "") {
+            besked += " " + efternavn;
+        }
+
+        if (besked == "Goddag") {
+            besked += " min ven";
+        }
+
+        alert(besked);
     </script>
 </body>
 </html>
